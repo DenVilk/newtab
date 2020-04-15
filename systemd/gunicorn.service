@@ -5,8 +5,8 @@ After=network.target
 [Service]
 User=denvilk
 Group=www-data
-WorkingDirectory=dbms_template_path/src
-ExecStart=dbms_template_path/env/bin/gunicorn --workers 3 --bind unix:dbms_template_path/gunicorn/gunicorn.sock config.wsgi:application --access-logfile dbms_template_path/gunicorn/access.log --error-logfile dbms_template_path/gunicorn/error.log
+WorkingDirectory=/home/denvilk/code/newtab/src
+ExecStart=/home/denvilk/code/newtab/env/bin/gunicorn --workers 3 --bind unix:/home/denvilk/code/newtab/gunicorn/gunicorn.sock config.wsgi:application --access-logfile /home/denvilk/code/newtab/gunicorn/access.log --error-logfile /home/denvilk/code/newtab/gunicorn/error.log
 Restart=on-failure
 
 [Install]
