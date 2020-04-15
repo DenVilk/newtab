@@ -3,16 +3,20 @@ from .utils import Currency, Contests
 
 # Create your views here.
 def index(request):
-    usd = Currency(145)
+    #usd = Currency(145)
+    usd = {'value': 2.45 , 'scale': 1}
     usd_val = usd['value']
     usd_count = usd['scale']
-    eur = Currency(292)
+    #eur = Currency(292)
+    eur = {'value': 2.68 , 'scale': 1}
     eur_val = eur['value']
     eur_count = eur['scale']
-    rub = Currency(298)
+    #rub = Currency(298)
+    rub = {'value': 3.34 , 'scale': 100}
     rub_val = rub['value']
     rub_count = rub['scale']
-    uah = Currency(290)
+    #uah = Currency(290)
+    uah = {'value': 9.02 , 'scale': 100}
     uah_val = uah['value']
     uah_count = uah['scale']
 
