@@ -1,14 +1,17 @@
 import requests
 import json
+import time
 
 bank_url = "https://nbrb.by/API/ExRates/Rates/"
 
 def Currency(cid):
     req = bank_url + str(cid)
     r = requests.get(req)
+    time.sleep(2)
     print(req)
-    value = str(int(r.json()['Cur_OfficialRate']*100)/100)
-    scale = str(r.json()['Cur_Scale'])
+    rj = r.json()
+    value = str(int(rj['Cur_OfficialRate']*100)/100)
+    scale = str(rj['Cur_Scale'])
     return {'value': value, 'scale': scale}
 
 def main():
