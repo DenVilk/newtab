@@ -32,6 +32,8 @@ def index(request):
     contests = Contests()
     contests.reverse()
 
+    print(request.get_host())
+
     return render(request, 'main/index.html', {'usd':usd_val, 'eur':eur_val, 'rub':rub_val, 'uah':uah_val,
                                                'usdc':usd_count, 'eurc':eur_count, 'rubc':rub_count, 'uahc':uah_count,
-                                               'contests':contests})
+                                               'contests':contests, 'host': request.get_host()})
