@@ -7,7 +7,7 @@ bank_url = "https://nbrb.by/API/ExRates/Rates/"
 def Currency(cid):
     req = bank_url + str(cid)
     r = requests.get(req)
-    time.sleep(2)
+    time.sleep(5)
     print(req)
     rj = r.json()
     value = str(int(rj['Cur_OfficialRate']*100)/100)
