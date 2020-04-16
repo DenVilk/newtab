@@ -1,22 +1,31 @@
 from django.shortcuts import render
 from .utils import Currency, Contests
+from sys import platform
+import json
 
 # Create your views here.
 def index(request):
-    #usd = Currency(145)
-    usd = {'value': 2.45 , 'scale': 1}
+    if (platform == "win32"):
+        path = "D:\\work\\python\\newtab\\cron\\currency.json"
+    else:
+        path = "/home/denvilk/code/newtab/cron/currency.json"
+
+    with open(path, "r") as read_file:
+        data = json.load(read_file)
+
+    usd = data['usd']
     usd_val = usd['value']
     usd_count = usd['scale']
-    #eur = Currency(292)
-    eur = {'value': 2.68 , 'scale': 1}
+    
+    eur = data['eur']
     eur_val = eur['value']
     eur_count = eur['scale']
-    #rub = Currency(298)
-    rub = {'value': 3.34 , 'scale': 100}
+
+    rub = data['rub']
     rub_val = rub['value']
     rub_count = rub['scale']
-    #uah = Currency(290)
-    uah = {'value': 9.02 , 'scale': 100}
+
+    uah = data['uah']
     uah_val = uah['value']
     uah_count = uah['scale']
 
