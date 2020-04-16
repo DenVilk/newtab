@@ -28,7 +28,9 @@
             e.preventDefault();
             const query = $("#query").val();
             if (query.length!=0){
-                location = 'https://yandex.by/search/?lr=155&text='+query;
+                if (query[query.length-1]=='/'){
+                    location = 'http://' + query;
+                }else location = 'https://yandex.by/search/?lr=155&text='+query;
             }else alert("Ваш запрос пуст");
             console.log("FUNCK");
             return false;
