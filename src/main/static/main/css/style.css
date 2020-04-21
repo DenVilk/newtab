@@ -27,3 +27,42 @@
 .disp-inline{
     display: inline-block;
 }
+
+.icons-menu{
+    font-size: 40px;
+    padding: 0 30px;
+}
+
+i[class*='-vk']{
+    color: #5181B8;
+}
+
+i[class*='-youtube']{
+    color: #DA281D;
+}
+
+i[class*='-github']{
+    color: black;
+}
+
+i[class*='-envelope']{
+    color: black;
+}
+
+i[class*='-yandex']{
+    color: red;
+}
+
+.icons-menu > * > a{
+    border-radius: 20px;
+    min-width: 50px;
+    min-height: 50px;
+    max-width: 50px;
+    max-height: 50px;
+    width: 50px;
+    height: 50px;
+}
+
+.icons-menu > * > a:hover{
+    background-color: #5181B8;
+}
