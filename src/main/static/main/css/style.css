@@ -35,34 +35,51 @@
 
 i[class*='-vk']{
     color: #5181B8;
+    margin-top: 10px;
+    margin-left: 5px;
 }
 
 i[class*='-youtube']{
     color: #DA281D;
+    margin-top: 9px;
+    margin-left: 5px;
 }
 
 i[class*='-github']{
     color: black;
+    margin-top: 9px;
+    margin-left: 8px;
 }
 
 i[class*='-envelope']{
     color: black;
+    margin-top: 10px;
+    margin-left: 7px;
 }
 
 i[class*='-yandex']{
     color: red;
+    margin-top: 10px;
+    margin-left: 15px;
 }
 
 .icons-menu > * > a{
-    border-radius: 20px;
-    min-width: 50px;
-    min-height: 50px;
-    max-width: 50px;
-    max-height: 50px;
-    width: 50px;
-    height: 50px;
+    border-radius: calc(55px / 2);
+    min-width: 55px !important;
+    min-height: 55px !important;
+    max-width: 55px !important;
+    max-height: 55px !important;
+    width: 55px !important;
+    height: 55px !important;
+    text-align: center;
+    /* padding-bottom: 10px; */
 }
+/* 
+.icons-menu > * > a > i{
+    margin-bottom: 10px;
+} */
 
 .icons-menu > * > a:hover{
-    background-color: #5181B8;
+    background-color: rgb(142, 162, 185);
+    text-decoration: none;
 }
