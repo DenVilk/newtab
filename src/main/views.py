@@ -29,8 +29,11 @@ def index(request):
     uah_val = uah['value']
     uah_count = uah['scale']
 
-    contests = Contests()
-    contests.reverse()
+    try:
+        contests = Contests()
+        contests.reverse()
+    except:
+        contests = False
 
     print(request.get_host())
 

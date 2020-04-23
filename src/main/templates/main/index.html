@@ -33,6 +33,7 @@
                     </div>
                     <div class="card-body" style="padding-bottom: 0;padding-top: 0;">
                         <div class="row">
+                            {% if contest %}
                             <table class="table table-striped table-dark">
                                 <thead>
                                     <tr>
@@ -49,6 +50,15 @@
                                     {% endfor %}
                                 </tbody>
                             </table>
+                            {% else %}
+                            <table class="table table-dark">
+                                <tbody>
+                                    <tr>
+                                        <td>No contests are available now.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
