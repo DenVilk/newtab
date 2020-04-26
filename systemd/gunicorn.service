@@ -6,7 +6,7 @@ After=network.target
 User=denvilk
 Group=www-data
 WorkingDirectory=/home/denvilk/code/newtab/src
-ExecStart=/home/denvilk/code/newtab/env/bin/gunicorn --workers 3 --bind unix:/home/denvilk/code/newtab/gunicorn/gunicorn.sock config.wsgi:application --access-logfile /home/denvilk/code/newtab/gunicorn/access.log --error-logfile /home/denvilk/code/newtab/gunicorn/error.log
+ExecStart=/home/denvilk/code/newtab/env/bin/gunicorn --workers 2 --bind unix:/home/denvilk/code/newtab/gunicorn/gunicorn.sock config.wsgi:application --access-logfile /home/denvilk/code/newtab/gunicorn/access.log --error-logfile /home/denvilk/code/newtab/gunicorn/error.log
 Restart=on-failure
 
 [Install]
